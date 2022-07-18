@@ -46,7 +46,7 @@
 		<div class="container mb-3 text-center">
 			<div class="row">
 				<div class="col">
-					<select name="applyFild">
+					<select name="applyFild" id="apply_fild">
 						<option>지원분야 선택
 						<option>기획/전략
 						<option>마케팅/홍보/조사
@@ -58,8 +58,11 @@
 					</select>
 				</div>
 				<div class="col">
-					<input type="radio" name="setting">신입(1년 이하)
-					<input type="radio" name="setting">경력(1년 이상)
+					<select name="career" id="career">
+						<option>경력구분
+						<option>경력
+						<option>신입
+					</select>
 				</div>
 				<div class="col">
 					<input type="text" value="" id="pay" class="form-control text-center" placeholder="회사내규">
@@ -72,7 +75,7 @@
 		<div class="card pt-3 pb-3 ps-3 mb-5 ms-3 me-3 mt-3">
 			<div class="row g-0">
 				<div class="col-md-4">
-					<div class="button1">
+					<div class="filebox">
 						<img src="" id="preview" width="250px;">	
 						<label for="ex_file"></label>
 						<input type="file" id="ex_file" name="chooseFile" accept="image/*" onchange="loadFile(this)">
@@ -80,32 +83,33 @@
 				</div>
 				<div class="col-md-8">
 					<div class="card-body">
-						<div class="row text-center ">
+						<div class="row text-center">
 							<div class="col-md-2">
 								<p class="card-text">성명</p>
 							</div>
 							<div class="col-md-4">
-								<input type="text" value="" id="name" class="form-control">
+								<input type="text" value="" class="form-control" id="name">
 							</div>
 							<div class="col-md-2">
-								<p class="card-text">한문</p>
+								<p class="card-text" >한문</p>
 							</div>
 							<div class="col-md-4">
-								<input type="text" value="" id="chiness" class="form-control">
+								<input type="text" value="" class="form-control" id="name_cn">
 							</div>
 						</div>
 						<div class="row text-center pt-3 pb-3">
 							<div class="col-md-2">
-								<p class="card-text">영문</p>
+								<p class="card-text" >영문</p>
 							</div>
 							<div class="col-md-4">
-								<input type="text" value="" id="english" class="form-control">
+								<input type="text" value="" class="form-control" id="name_en">
 							</div>
 							<div class="col-md-2">
 								<p class="card-text">생년월일</p>
 							</div>
 							<div class="col-md-4">
-								<input type="date" id="birthday" name="birthday" min="1950-01-01" max="2029-12-31"  style="display: block; margin: 0 auto;">
+								<input type="date" value="" class="form-control" id="dob">
+								<!-- <input type="date" id="birthday" name="birthday" min="1950-01-01" max="2029-12-31"  style="display: block; margin: 0 auto;"> -->
 							</div>
 						</div>
 						<div class="row text-center pb-3">
@@ -113,21 +117,36 @@
 								<p class="card-text">전화번호</p>
 							</div>
 							<div class="col-md-4">
-								<input type="text" value="" id="number" class="form-control">
+								<input type="text" value="" class="form-control" id="tell_num">
 							</div>
 							<div class="col-md-2">
 								<p class="card-text">비상연락망</p>
 							</div>
 							<div class="col-md-4">
-								<input type="text" value="" id="number2" class="form-control">
+								<input type="text" value="" id="number2" class="form-control" id="tell_num_emg">
 							</div>
 						</div>
 						<div class="row text-center pb-3">
-							<div class="col-md-7">
-								<input type="email" value="" id="e-mail" class="form-control">
-							</div>
-							<div class="col-md-5">
+							<div class="col-md-2">
 								<p class="card-text">이메일</p>
+							</div>
+							<div class="col-md-3">
+								<input type="text" value="" class="form-control" id="email">
+							</div>
+							<div class="col-md-4">
+								<div class="input-group">
+									<span class="input-group-text" id="inputGroupPrepend2">@</span>
+									<input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<select class="form-select" id="emailSelect" required>
+									<option selected disabled value="">이메일선택</option>
+									<option>naver.com</option>
+									<option>daum.net</option>
+									<option>gmail.com</option>
+									<option>kakao.com</option>
+								</select>
 							</div>
 						</div>
 						<div class="row text-center">
@@ -135,7 +154,7 @@
 								<p class="card-text">주소</p>
 							</div>
 							<div class="col-md-10">
-								<input type="text" value="" id="number2" class="form-control">
+								<input type="text" value="" class="form-control" id="addr">
 							</div>
 						</div>
 					</div>
