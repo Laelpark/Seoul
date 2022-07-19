@@ -177,29 +177,32 @@
 		<div class="pe-4 ps-3">
 			<div class="row">
 				<div class="col-md-6"> 
-					<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					  Launch demo modal
-					</button>
-					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-					        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					      </div>
-					      <div class="modal-body">
-					        ...
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					        <button type="button" class="btn btn-primary">Save changes</button>
-					      </div>
-					    </div>
-					  </div>
+					<div class="bd-example">
+						<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+							삭제하기
+						</button>
 					</div>
-				</div>
-				<div>
-					<button class="btn btn-danger" type="button" id="cancle"><i class="fa-solid fa-trash-can"></i></button>
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalCenterTitle">삭제하시겠습니까?</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body"  align="center">
+									<p>입력하신 정보가 저장되지 않았습니다.</p>
+								</div>
+								<div class="modal-footer">
+									<a>
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+									</a>
+									<a href="./memberList.html">
+										<button type="button" class="btn btn-danger">삭제</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6" align="right">
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -212,7 +215,7 @@
 							  <h5 class="modal-title" id="exampleModalLabel">저장완료</h5>
 							  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
-							<div class="modal-body">
+							<div class="modal-body" align="center">
 								<img src="./DLlogo.png" class="rounded me-2" alt="..." style="width: 8%; height: 8%;">
 							  귀하의 지원서가 성공적으로 저장되었습니다.
 							</div>
