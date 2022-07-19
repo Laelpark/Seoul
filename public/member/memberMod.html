@@ -18,8 +18,8 @@
 </head>
 <body>
 	<!-- start -->
-	<form>
-		<nav class="navbar sticky-top" style="background-color: #e3f2fd;">
+	<form class="p-5">
+		<nav class="navbar fixed-top mb-5" style="background-color: #e3f2fd;">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
 					<img src="DLlogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
@@ -27,6 +27,19 @@
 				</a>
 			</div>
 		</nav>
+		<div class="mt-5">
+			<ul class="nav nav-tabs ms-3 me-3">
+			  <li class="nav-item">
+			    <a class="nav-link active" aria-current="page" href="./memberList.html">회원관리</a>
+			  </li> 
+			  <li class="nav-item">
+			    <a class="nav-link" href="./memberMod.html">코드관리</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="./memberReg.html">코드그룹관리</a>
+			  </li>
+			</ul>
+		</div>
 		<h3 style="text-align: center" class="pt-3 pb-3 mb-5">지원서</h3>
 		<div>
 			<div class="container mb-3 text-center">
@@ -161,20 +174,97 @@
 				</div>
 			</div>
 		</div>
+		<div class="pe-4 ps-3">
+			<div class="row">
+				<div class="col-md-6"> 
+					<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					  Launch demo modal
+					</button>
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<div>
+					<button class="btn btn-danger" type="button" id="cancle"><i class="fa-solid fa-trash-can"></i></button>
+				</div>
+				<div class="col-md-6" align="right">
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						저장하기
+					  </button>
+					  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="exampleModalLabel">저장완료</h5>
+							  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<img src="./DLlogo.png" class="rounded me-2" alt="..." style="width: 8%; height: 8%;">
+							  귀하의 지원서가 성공적으로 저장되었습니다.
+							</div>
+							<div class="modal-footer">
+								<a  href="./memberList.html">
+									 <button type="button" class="btn btn-primary">확인</button>
+								</a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+				</div>	
+			</div>
+		</div>
 	</form>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		document.getElementById('birthday').valueAsDate = new Date();
+		
+		document.getElementById('dob').valueAsDate = new Date();
 
+		// 이미지 미리보기
 		const reader = new FileReader();
         reader.onload = (readerEvent) => {
             document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
         };
+		
         document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
             const imgFile = changeEvent.target.files[0];
             reader.readAsDataURL(imgFile);
         })
+
+		// 데이터 받아오기
+		var img = sessionStorage.getItem("img");
+		document.getElementById("preview").src = img;
+		var name = sessionStorage.getItem("name");
+		document.getElementById("name").value = name;
+
+		const myModal = document.getElementById('myModal')
+		const myInput = document.getElementById('myInput')
+
+		myModal.addEventListener('shown.bs.modal', () => {
+			myInput.focus()
+		})
+
+		function save() {
+			var name = sessionStorage.setItem("name");
+			sessionStorage.setItem("name", name);
+			var name = sessionStorage.setItem("name_cn");
+			sessionStorage.setItem("name_cn", chiness);
+		}
 	</script>
 	<!-- end --> 
 </body>

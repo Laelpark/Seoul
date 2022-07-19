@@ -63,22 +63,23 @@
 			  </div>
 			</div>
 		</nav>
+		
 		<div class="card bg-white text-white m-5 pt-4" style="border-color: white;"> 
 			<img src="scott-graham-OQMZwNd3ThU-unsplash.jpg" class="card-img" alt="...">
 			<div class="card-img-overlay">
 				<h2 class="card-title position-absolute bottom-50 start-50 translate-middle" style="color: black;">지원명단</h2>
 			</div>	
 		</div>
-		<div>
+		<div class="mt-5">
 			<ul class="nav nav-tabs ms-3 me-3">
 			  <li class="nav-item">
-			    <a class="nav-link active" aria-current="page" href="#">회원관리</a>
+			    <a class="nav-link active" aria-current="page" href="./memberList.html">회원관리</a>
 			  </li> 
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">코드관리</a>
+			    <a class="nav-link" href="./memberMod.html">코드관리</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">코드그룹관리</a>
+			    <a class="nav-link" href="./memberReg.html">코드그룹관리</a>
 			  </li>
 			</ul>
 		</div>
@@ -117,7 +118,20 @@
 					<input type="text" class="form-control" id="validationCustom04" placeholder="검색어를 입력하세요." required>
 				</div>
 				<div class="col-md-2">
-					<button class="btn btn-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<button class="btn btn-warning" type="submit" id="searching"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div class="toast-container position-fixed bottom-0 end-0 p-3">
+						<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+							<div class="toast-header">
+								<img src="..." class="rounded me-2" alt="...">
+								<strong class="me-auto">Bootstrap</strong>
+								<small>11 mins ago</small>
+								<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+							</div>
+							<div class="toast-body">
+								Hello, world! This is a toast message.
+							</div>
+						</div>
+					</div>
 					<button class="btn btn-danger" type="submit"><i class="fa-solid fa-rotate-right"></i></button>
 				</div>
 			</div>
@@ -254,8 +268,8 @@
 				</div>
 				<div class="col-md-2 offset-md-8" align="right">
 					<button class="btn btn-success" type="button"><i class="fa-solid fa-file-excel"></i></button>
-					<button class="btn btn-primary" type="button"><i class="fa-solid fa-plus"></i></button>
-				</div>	
+					<a href="./memberReg.html"><i class="fa-solid fa-plus"></i></a>
+				</div>
 			</div>
 		</div>
 		<nav class="navbar navbar-expand-lg bg-white mt-5 mb-3 position-absolute bottom-30 start-50 translate-middle-x">
@@ -289,10 +303,20 @@
 	<script>
 		const fileInput = document.getElementById("fileUpload");
 		fileInput.onchange = () => {
-		  const selectedFile = [...fileInput.files];
-		  console.log(selectedFile);
+			const selectedFile = [...fileInput.files];
+			console.log(selectedFile);
 		};
 		fileInput.addEventListener("change", handleFiles);
+
+		const toastTrigger = document.getElementById('savebtn')
+		const toastLiveExample = document.getElementById('liveToast')
+		if (toastTrigger) {
+			toastTrigger.addEventListener('click', () => {
+				const toast = new bootstrap.Toast(toastLiveExample)
+
+				toast.show()
+			})
+		}
 	</script>
 </body>
 </html>
