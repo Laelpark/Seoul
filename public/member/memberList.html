@@ -141,7 +141,7 @@
 				<thead>
 					<tr style="background-color: #6666cc;">
 						<th scope="col">
-							<input type="checkbox" name="checkAll" id="checkAll">
+							<input type="checkbox" name="chk_all" id="chk_all">
 						</th>
 						<td>#</td>
 						<td scope="col">이름</td>
@@ -152,7 +152,9 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td scope="row"><input type="checkbox" name="chk_box" class="checkSelect"></td>
+						<td scope="row">
+							<input type="checkbox" name="chk_box" class="checkSelect">
+						</td>
 						<td >1</td>
 						<td>박**</td>
 						<td>2n</td>
@@ -175,7 +177,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td scope="row"><input type="checkbox" name="chk_box" class="checkSelect"></td>
+						<td scope="row">
+							<input type="checkbox" name="chk_box" class="checkSelect">
+						</td>
 						<th scope="row">2</th>
 						<td>이**</td>
 						<td>2n</td>
@@ -198,7 +202,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td scope="row"><input type="checkbox" name="chk_box" class="checkSelect"></td>
+						<td scope="row">
+							<input type="checkbox" name="chk_box" class="checkSelect">
+						</td>
 						<th scope="row">3</th>
 						<td>유**</td>
 						<td>3n</td>
@@ -221,7 +227,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td scope="row"><input type="checkbox" name="chk_box" class="checkSelect"></td>
+						<td scope="row">
+							<input type="checkbox" name="chk_box" class="checkSelect">
+						</td>
 						<th scope="row">4</th>
 						<td>김**</td>
 						<td>3n</td>
@@ -270,7 +278,7 @@
 		<div class="container-fluid pe-4 ps-3">
 			<div class="row">
 				<div class="col-md-2"> 
-					<button class="btn btn-danger" type="button"><i class="fa-solid fa-trash-can"></i></button>
+					<button class="btn btn-danger" type="button"><i class="fsa-solid fa-trash-can"></i></button>
 					<button class="btn btn-danger" type="button"><i class="fa-solid fa-xmark"></i></button>
 				</div>
 				<div class="col-md-2 offset-md-8" align="right">
@@ -326,16 +334,15 @@
 				toast.show()
 			})
 		}
-		$(document).on("click", "#checkAll", function(){
-			if (! $('#checkAll').attr('checked')) {
-					$('.checkSelect').attr('checked', false);
-			}else{
-				$('.checkSelect').attr('checked', 'checked');
-			}
-		});
-		$(document).on("click", ".checkSelect", function(){
-			$("#checkAll").attr('checked', false);
-		});
+		
+		function checkAll(){
+			if(document.getElementById("chk_all").checked==true){  //id 를 사용하여 하나의 객체만을 호출
+					for(var i=0;i<3;i++) document.getElementsByName("chk_box")[i].checked=true;   //name 을 사용하여 배열 형태로 담아 호출
+				}
+				if(document.getElementById("chk_all").checked==false){
+					for(var i=0;i<3;i++) document.getElementsByName("chk_box")[i].checked=false;  
+				}
+		}
 	</script>
 </body>
 </html>
