@@ -278,7 +278,7 @@
 		<div class="container-fluid pe-4 ps-3">
 			<div class="row">
 				<div class="col-md-2"> 
-					<button class="btn btn-danger" type="button" ><i class="fa-solid fa-trash-can"></i></button>
+					<button class="btn btn-danger del" type="button" onclick=deleteValue();><i class="fa-solid fa-trash-can"></i></button>
 					<button class="btn btn-danger" type="button"><i class="fa-solid fa-xmark"></i></button>
 				</div>
 				<div class="col-md-2 offset-md-8" align="right">
@@ -361,6 +361,12 @@
 			checkboxes.forEach((checkbox) => {
 				checkbox.checked = selectAll.checked
 			})
+		}
+		function deleteValue(){
+			var ur1 = "delete";
+			var valueArr = new Array();
+			var list = $()
+
 		}
 	</script>
 </body>
