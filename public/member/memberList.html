@@ -6,10 +6,10 @@
 	<title>memberList.html</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<style  type="text/css">
-		card bg-light {
+		/* card bg-light {
 		  height:100vh;
 		  width: 100vw;
-		}
+		} */
 	</style>
 </head>
 <body>
@@ -63,25 +63,13 @@
 			  </div>
 			</div>
 		</nav>
-		
-		<div class="card bg-white text-white m-5 pt-4" style="border-color: white;"> 
-			<img src="scott-graham-OQMZwNd3ThU-unsplash.jpg" class="card-img" alt="...">
-			<div class="card-img-overlay">
-				<h2 class="card-title position-absolute bottom-50 start-50 translate-middle" style="color: black;">지원명단</h2>
-			</div>	
-		</div>
-		<div class="mt-5">
-			<ul class="nav nav-tabs ms-3 me-3">
-			  <li class="nav-item">
-			    <a class="nav-link active" aria-current="page" href="./memberList.html">회원관리</a>
-			  </li> 
-			  <li class="nav-item">
-			    <a class="nav-link" href="./memberMod.html">코드관리</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="./memberReg.html">코드그룹관리</a>
-			  </li>
-			</ul>
+		<div class="pb-3 pe-3 ps-3 pt-4">
+			<div class="card text-white mt-5 shadow"> 
+				<img src="scott-graham-OQMZwNd3ThU-unsplash.jpg" class="card-img" alt="..." style="max-height: 250px;">
+				<div class="card-img-overlay p-5">
+					<h2 class="card-title text-center p-5" style="color: black;">지원명단</h2>
+				</div>	
+			</div>
 		</div>
 		<div class="row needs-validation ms-3 me-3 mt-3 mb-5 p-3 shadow-lg bg-body rounded" novalidate>
 			<div class="row mb-2">
@@ -136,6 +124,19 @@
 				</div>
 			</div>
 		</div>	
+		<div class="mt-4">
+			<ul class="nav nav-tabs ms-3 me-3">
+			  <li class="nav-item">
+			    <a class="nav-link active" aria-current="page" href="./memberList.html">지원명단</a>
+			  </li> 
+			  <li class="nav-item">
+			    <a class="nav-link" href="./memberReg.html">지원서</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="./memberMod.html">지원서 수정</a>
+			  </li>
+			</ul>
+		</div>
 		<div class="ms-3 me-3 mt-3 mb-4 shadow-lg bg-body rounded">
 			<table class="table table-striped table-hover text-center">
 				<thead>
@@ -151,8 +152,8 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row" class="td1">
+					<tr onclick="newPage()">
+						<th scope="row" class="td1" src="./memberMod.html">
 							<input type="checkbox" name="chk_box" onclick="checkSelectAll(this)">
 						</th>
 						<td>1</td>
@@ -278,11 +279,33 @@
 		<div class="container-fluid pe-4 ps-3">
 			<div class="row">
 				<div class="col-md-2"> 
-					<button class="btn btn-danger del" type="button" onclick=deleteValue();><i class="fa-solid fa-trash-can"></i></button>
-					<button class="btn btn-danger" type="button"><i class="fa-solid fa-xmark"></i></button>
+					<button class="btn btn-danger del" type="button" onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa-solid fa-trash-can"></i></button>
+					<!-- <button class="btn btn-danger" type="button"><i class="fa-solid fa-xmark"></i></button> -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalCenterTitle">삭제하시겠습니까?</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body"  align="center">
+									<img src="./DLlogo.png" class="rounded me-2" alt="..." style="width: 8%; height: 8%;">
+									삭제된 정보는 복구할 수가 없습니다.
+								</div>
+								<div class="modal-footer">
+									<a>
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+									</a>
+									<a href="./memberList.html">
+										<button type="button" class="btn btn-danger">삭제</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-2 offset-md-8" align="right">
-					<button class="btn btn-success" type="button"><i class="fa-solid fa-file-excel"></i></button>
+					<!-- <button class="btn btn-success" type="button"><i class="fa-solid fa-file-excel"></i></button> -->
 					<a href="./memberReg.html">
 						<button class="btn btn-primary" type="button"><i class="fa-solid fa-plus"></i></button>
 					</a>
@@ -366,7 +389,9 @@
 			var ur1 = "delete";
 			var valueArr = new Array();
 			var list = $()
-
+		}
+		function newPage() {
+			window.location.href = './memberMod.html'
 		}
 	</script>
 </body>
