@@ -15,7 +15,7 @@
 			filter: brightness(85%);
 		}
 
-		.imtext {
+		.imtext1 {
 			position: absolute;
 			top: 90px;
 			left: 20px;
@@ -25,6 +25,11 @@
 			width: 800px;
 			font-weight: bold;
 		}
+		
+		/* .imtext2 {
+			position: absolute;
+			z-index: 1;
+		} */
 
 		ul{
    			list-style:none;
@@ -36,52 +41,58 @@
 	<form>
 		<nav class="navbar" style="background-color:rgb(142, 68, 173); height: 100%;">
 			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">
-				  <img src="./logo2.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-				  <span class= "align-middle" style="color: white; font-size: 20px;">SHARE</span>
-			  </a>
-			  <div class="pt-5">
-				  <a>
-					  <span style="color: rgb(197, 26, 26); text-shadow: 2px 2px 2px black;" class="fw-bold fs-4 pe-5">실시간 HOT!</span>
-					  <span style="color: white; text-shadow: 2px 2px black;" class="fw-bold fs-4 pe-5">Share Pot</span>
-					  <span style="color: white; text-shadow: 2px 2px black;" class="fw-bold fs-4">Share Now</span>
-				  </a>
-			  </div>
-			  <div>
-				  <ul class="navbar-nav flex-row ms-md-auto pe-3">
-					  <li class="nav-item col-4 me-2">
-						  <a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
-							  <i class="fa-solid fa-user fa-lg"></i>
-						  </a>
-					  </li>
-					  <li class="">
-						  <a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
-							  <i class="fa-solid fa-comments fa-lg m"></i>
-						  </a>
-					  </li>
-					  <li class="nav-item col-4 me-2">
-						  <a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
-							  <i class="fa-solid fa-star fa-lg"></i>
-						  </a>
-					  </li>
-				  </ul>
-			  </div>	
+				<a class="navbar-brand" href="#">
+					<img src="../img/fullLogo2.png" alt="" width="140px" height="60px" class="d-inline-block align-text-top">
+				</a>
+				<div class="pt-5">
+					<a>
+						<span style="color: rgb(197, 26, 26); text-shadow: 2px 2px 2px black;" class="fw-bold fs-4 pe-5">실시간 HOT!</span>
+						<span style="color: white; text-shadow: 2px 2px black;" class="fw-bold fs-4 pe-5">Share Pot</span>
+						<span style="color: white; text-shadow: 2px 2px black;" class="fw-bold fs-4">Share Now</span>
+					</a>
+				</div>
+				<div>
+					<ul class="navbar-nav flex-row ms-md-auto pe-3">
+						<li class="nav-item col-4 me-2">
+							<a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
+								<i class="fa-solid fa-user fa-lg"></i>
+							</a>
+						</li>
+						<li class="">
+							<a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
+								<i class="fa-solid fa-comments fa-lg m"></i>
+							</a>
+						</li>
+						<li class="nav-item col-4 me-2">
+							<a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100);">
+								<i class="fa-solid fa-star fa-lg"></i>
+							</a>
+						</li>
+					</ul>
+				</div>	
 			</div>
-	  </nav>
-		<div class="container-fluid">
-			<ul class="imtext">
-				<li>
-					<input class="form-control me-2" type="search" style= "width: 200px; height: 70px;" aria-label="Search">
-				</li>
-				<li>
-					<button class="btn btn-outline-success" type="submit" style= "width: 70px; height: 70px;">Search</button>
-				</li> 
-			</ul>
+	  	</nav>
+		<div class="position-relative">
+			<div class="d-flex text-center imtext2 ms-5 ps-5 position-absolute" role="search" style="z-index: 1;">
+				<div class="dropdown imtext">
+					<a class="btn dropdown-toggle" style="background-color: lightgray;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						카테고리
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">피자</a></li>
+						<li><a class="dropdown-item" href="#">햄버거</a></li>
+						<li><a class="dropdown-item" href="#">보쌈/족발</a></li>
+					</ul>
+				</div>
+				<input class="form-control text-center mx-3" type="search" style= "width: 500px; height: 50px; background-color: lightgrey;" placeholder="검색어를 입력해주세요." aria-label="Search">
+				<button class="btn btn-outline-success" type="submit" style= "width: 70px; height: 50px;">Search</button>
+			</div>
 		</div>
+		
 		<div id="bg-img" class="carousel slide " data-bs-ride="carousel">
 			<div class="carousel-inner img-fluid">
 				<div class="carousel-item active">
-					<ul class="imtext">
+					<ul class="imtext1">
 						<li>
 							<a style="font-size: 80px">1인배달,</a>
 						</li>
@@ -92,11 +103,11 @@
 							<a style="color: rgb(142, 68, 173); text-shadow: 6px 2px 2px white; font-size: 80px;">SHARE</a>하자!
 						</li>
 					</ul>
-					<img src="1g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 850px;">
+					<img src="../img/1g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
 				</div>
 				<div class="carousel-item">
-					<ul class="imtext" style="color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15);">
-						<li class="ps-5">
+					<ul class="imtext1" style="color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15);">
+						<li  class="ps-5">
 							<a style="font-size: 100px">Share</a>
 						</li>
 						<li>
@@ -106,7 +117,7 @@
 							<a style="font-size: 150px">Now</a>
 						</li>
 					</ul>
-					<img src="2g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 850px;">
+					<img src="../img/2g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
 				</div>
 		  </div>
 		  <button class="carousel-control-prev" type="button" data-bs-target="#bg-img" data-bs-slide="prev">
