@@ -9,35 +9,49 @@
 		.logo_box {
 			position:absolute; top:10%; left:43%; margin:-150px 0 0 -150px
 		}
-		.log_text{
+		.log{
 			position:absolute; left:35%; margin:-150px 0 0 -150px
 		}
 		.btn{
 			position:absolute; top: 200px; left: 210px; margin:-150px 0 0 -150px
 		}
-		.log_ck{
-			position:absolute; left:35%; top: 300px; left: 430px; margin:-150px 0 0 -150px
-		}
 	</style>
 </head>
 <body>
 	<!-- start -->
-		<div class="logo_box">
-			<img alt="" src="DLlogo.png"  style="width: 50px; height: 50px">
+	<div class="logo_box">
+		<img alt="" src="DLlogo.png"  style="width: 50px; height: 50px">
+	</div>
+	<div class="container text-center">
+	  <div class="row row-cols-3">
+			<div class="col"></div>
+			<div class="col">
+				<input class="log" type="text" placeholder="ID" style="width: 20%; height: 50px; top: 180px">
+			</div>
 		</div>
-		<div class="all">
-			<div>
-				<input class="log_text" type="text" placeholder="ID" style="width: 20%; height: 50px; top: 180px">
-				<input class="log_text" type="text" placeholder="pw" style="width: 20%; height: 50px; top: 240px">
+		<div>	
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col">
+				<input class="log" type="text" placeholder="pw" style="width: 20%; height: 50px; top: 240px">
 			</div>
-			<div class= "log_ck form-check form-switch">
-				<input class="form-check-input"type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-				<label class="form-check-label" for="flexSwitchCheckChecked">Auto login</label>
-			</div>
+		</div>
+	     <div class="log form-check form-switch col">
+	     	<input class="form-check-input"type="checkbox" style="top: 300px" role="switch" id="flexSwitchCheckChecked" checked>
+			<label class="form-check-label" style="top: 300px" for="flexSwitchCheckChecked">Auto login</label>
+	     </div>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+	
+
 			<div class="btn">
 				<button type="button" class="btn btn-secondary" style="width: 250px;">login</button>
 			</div>
-		</div>
 		
 	<!-- end --> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
