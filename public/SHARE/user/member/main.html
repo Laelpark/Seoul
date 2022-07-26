@@ -15,7 +15,7 @@
 			filter: brightness(85%);
 		}
 
-		.imtext1 {
+		/* .imtext1 {
 			position: absolute;
 			top: 90px;
 			left: 20px;
@@ -24,7 +24,7 @@
 			font-size: 80px;
 			width: 800px;
 			font-weight: bold;
-		}
+		} */
 		
 		div#search_box {
 			position: absolute;
@@ -88,10 +88,10 @@
 					<button class="btn btn-outline-success" type="submit" style= "width: 70px; height: 50px;">Search</button>
 			</div>
 		</div>
-		<div id="bg-img" class="carousel slide " data-bs-ride="carousel">
-			<div class="carousel-inner img-fluid">
+		<div id="bg-img" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner img-fluid position-relative">
 				<div class="carousel-item active">
-					<ul class="imtext1">
+					<ul class="imtext1 position-absolute fw-bold" style="z-index: 1; color:white; font-size: 80px; width: 800px; top: 90px; left: 20px;">
 						<li>
 							<a style="font-size: 80px">1인배달,</a>
 						</li>
@@ -104,16 +104,16 @@
 					</ul>
 					<img src="../img/1g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
 				</div>
-				<div class="carousel-item">
-					<ul class="imtext1" style="color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15);">
-						<li  class="ps-5">
-							<a style="font-size: 100px">Share</a>
+				<div class="carousel-item" style="z-index: 1;">
+					<ul class="imtext1 position-absolute" style="z-index: 1; top: 100px; left: 50px;">
+						<li class="ps-5 top-25 start-25">
+							<a style="font-size: 100px; top: 100px; color: white; text-shadow: 6px 2px 2px yellow;">Share</a>
 						</li>
-						<li>
-							<a style="font-size: 130px">Together</a>
+						<li class="ps-5 top-50 start-50">
+							<a style="font-size: 130px; color: white; text-shadow: 6px 2px 2px yellow;">Together</a>
 						</li>
-						<li>
-							<a style="font-size: 150px">Now</a>
+						<li class="ps-5 bottom-25 end-25">
+							<a style="font-size: 150px; color: white; text-shadow: 6px 2px 2px yellow;">Now</a>
 						</li>
 					</ul>
 					<img src="../img/2g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
