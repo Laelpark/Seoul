@@ -72,24 +72,26 @@
 				</div>	
 			</div>
 	  	</nav>
-		<div class="position-relative">
-			<div id= "search_box" class="d-flex text-center ms-5 ps-5 position-absolute" role="search" style="z-index: 2">
-				<div class="dropdown imtext">
-					<a class="btn dropdown-toggle" style="background-color: lightgray; z-index: 1;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						카테고리
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">피자</a></li>
-						<li><a class="dropdown-item" href="#">햄버거</a></li>
-						<li><a class="dropdown-item" href="#">보쌈/족발</a></li>
-					</ul>
-				</div>
-					<input class=" form-control text-center mx-3" type="search" style= "width: 500px; height: 50px; background-color: lightgrey;" placeholder="검색어를 입력해주세요." aria-label="Search">
-					<button class="btn btn-outline-success" type="submit" style= "width: 70px; height: 50px;">Search</button>
-			</div>
+		<div class="position-relative contianer">
+            <div class="row">
+                <div id= "search_box" class="d-flex text-center col-4 offset-4" role="search" style="z-index: 2">
+                    <div class="dropdown imtext">
+                        <a class="btn dropdown-toggle" style="background-color: lightgray; z-index: 1;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            카테고리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">피자</a></li>
+                            <li><a class="dropdown-item" href="#">햄버거</a></li>
+                            <li><a class="dropdown-item" href="#">보쌈/족발</a></li>
+                        </ul>
+                    </div>
+                    <input class=" form-control text-center mx-3" type="search" style= "width: 500px; height: 50px; background-color: lightgrey;" placeholder="검색어를 입력해주세요." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style= "width: 70px; height: 50px;">Search</button>
+                </div>
+            </div>
 		</div>
-		<div id="bg-img" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner img-fluid position-relative">
+		<div id="bg-img" class="carousel slide container-fluid" data-bs-ride="carousel">
+			<div class="carousel-inner img-fluid">
 				<div class="carousel-item active">
 					<ul class="imtext1 position-absolute fw-bold" style="z-index: 1; color:white; font-size: 80px; width: 800px; top: 90px; left: 20px;">
 						<li>
@@ -105,17 +107,27 @@
 					<img src="../img/1g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
 				</div>
 				<div class="carousel-item" style="z-index: 1;">
-					<ul class="imtext1 position-absolute" style="z-index: 1; top: 100px; left: 50px;">
-						<li class="ps-5 top-25 start-25">
-							<a style="font-size: 100px; top: 100px; color: white; text-shadow: 6px 2px 2px yellow;">Share</a>
-						</li>
-						<li class="ps-5 top-50 start-50">
-							<a style="font-size: 130px; color: white; text-shadow: 6px 2px 2px yellow;">Together</a>
-						</li>
-						<li class="ps-5 bottom-25 end-25">
-							<a style="font-size: 150px; color: white; text-shadow: 6px 2px 2px yellow;">Now</a>
-						</li>
-					</ul>
+                    <div class="row">
+                        <div class="align-middle">
+                            <ul class="position-absolute top-50 start-50 translate-middle fw-bold" style="z-index: 1; color:white; font-size: 80px; width: 800px; top: 90px; left: 20px;">
+                                <li class="col-5 offset-2">
+                                    <a style="font-size: 100px; top: 100px; color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15);" href="#">
+                                        Share
+                                    </a>
+                                </li>
+                                <li class="col-5 offset-4">
+                                    <a style="font-size: 130px; color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15);" href="#">
+                                        Together
+                                    </a>
+                                </li>
+                                <li class="col-2 offset-10">
+                                    <a style="font-size: 150px; color: white; text-shadow: 6px 2px 2px rgba(241, 196, 15, 0.61);" href="#"> 
+                                        Now
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 					<img src="../img/2g.jpg" class="d-block w-100 inner-shadow" alt="..." style="height: 900px;">
 				</div>
 		  </div>
