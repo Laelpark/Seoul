@@ -6,7 +6,19 @@
 	<title>main.html</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<style  type="text/css">
-		
+		.selecetBox {
+			width: 150px;
+			float: right;
+		}
+
+		.form-select{
+			text-align: center;
+		}
+
+		.selecetBox input#search{
+			text-align: center;
+			width: 150px;
+		}
 	</style>
 </head>
 <body>
@@ -14,11 +26,60 @@
 	<nav class="navbar mb-3" style="background-color:rgb(142, 68, 173); height: 30%;"></nav>
 	<nav class="bg-transparent">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#">
-	      <img src="../img/fullLogo_p.png" alt="" width="150" height="60" class="d-inline-block align-text-top">
-	    </a>
-	  </div>
+			<a class="navbar-brand" href="#">
+				<img src="../img/sharehot.png" alt="" width="200" height="50" class="d-inline-block align-text-top ms-3">
+			</a>
+		</div>
 	</nav>
+	<nav class="navbar navbar-expand-lg bg-transparent mt-3">
+		<div class="container-fluid">
+			<ul class="navbar-nav me-auto mb-2">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						종류
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+			  	</li>
+			</ul>
+			<ul class="navbar-nav me-2 mb-2">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						인원
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+			  	</li>
+			</ul>
+			<ul class="navbar-nav me-4 mb-2">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						시간
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+			  	</li>
+			</ul>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button type="button" class="btn bg-transparent border border-color: ">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
+
 
 	<!-- end --> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
