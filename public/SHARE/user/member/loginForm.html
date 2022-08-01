@@ -8,13 +8,13 @@
 	<style  type="text/css">
 		.id {
 			border-color: transparent;
-			width: 500px;
+			width: 400px;
 			height: 67px;
 	 }
 
 	 .pw {
 			border-color: transparent;
-			width: 500px;
+			width: 400px;
 			height: 67px;
 	 }
    </style>
@@ -23,35 +23,53 @@
 	<!-- start -->
 		<div class="navbar" style="background-color:rgb(142, 68, 173); height: 50px;"></div>
 		<div class="container-fluid">
-		<div class="row pt-5">
+			<div class="row pt-5">
 				<div class="col-12 text-center mb-3">
 					<img alt="" src="../img/fullLogo_p.png"  style="width: 280px; height: 100px">
 				</div>
 				<div class="col-12 text-center mb-3">
 					<img alt="" src="../img/user.png"  style="width: 100px; height: 100px; border-radius: 100px;">
 				</div>
-				<div class="input-group col-4 offset-4 mb-3">
-					<span class="input-group-text" id="idimg">
-						<i class="fa-solid fa-user p-3" style="font-size: 23px;"></i>
-					</span>
-					<input class="id" type="text" id="id"  placeholder="ID" aria-describedby="inputGroupPrepend" required>
+				<div class="row">
+					<div class="input-group col-3 offset-4">
+						<span class="input-group-text" id="idimg">
+							<i class="fa-solid fa-user p-3 d-grid" style="font-size: 23px;"></i>
+						</span>
+						<input class="id" type="text" id="id"  placeholder="ID" aria-describedby="inputGroupPrepend" required>
+					</div>
+					<div class="form-check col-3 offset-4 mb-3">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Default checkbox
+						</label>
+					</div>
+					<div class="input-group col-3 offset-4">
+						<span class="input-group-text" id="pwimg">
+							<i class="fas fa-solid fa-lock p-3 d-grid" style="font-size: 23px;"></i>
+						</span>
+						<input class="pw" type="text" id="pw"  placeholder="PASSWORD" aria-describedby="inputGroupPrepend" required>
+					</div>
+					<div class="col-2 offset-4 m3-3 form-switch mb-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+						<label class="form-check-label" for="flexSwitchCheckChecked">Autolog </label>
+					</div>
 				</div>
-				<div class="input-group col-4 offset-4 mb-3">
-					<span class="input-group-text" id="pwimg">
-						<i class="fas fa-solid fa-lock p-3" style="font-size: 23px;"></i>
-					</span>
-					<input class="pw" type="text" id="pw"  placeholder="PASSWORD" aria-describedby="inputGroupPrepend" required>
+				
+				<div class="col-4 offset-4 mb-3 inline-block">
+					<button type="button" class="btn" style=" width: 400px; height: 70px; background-color: blueviolet; color: white;">login</button>
 				</div>
-				<div class="col-4 offset-4 mb-3 form-switch">
-					<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-					<label class="form-check-label" for="flexSwitchCheckChecked">Autolog </label>
-				</div>
-				<div class="col-4 offset-4 mb-3 d-grid">
-					<button type="button" class="btn" style="height: 70px; background-color: blueviolet; color: white;">login</button>
-				</div>
-				<div class="col-4 offset-4 mb-3 d-grid">
-					<a class="fs-4 text-center" href="#">Find Id/Password</a>
-					<hr>
+				<div class="container text-center">
+					<div class="row" href="#">
+					  <div class="col offset-4">
+						회원가입
+					  </div>
+					  <div class="col offset-4">
+						
+					  </div>
+					  <div class="col" href="#">
+						비밀번호 / 아이디 찾기
+					  </div>
+					</div>
 				</div>
 			</div>
 		</div>

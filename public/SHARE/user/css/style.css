@@ -1,0 +1,6 @@
+.a li:after{
+    float: right;
+    display: block;
+    content: "|";
+    color: #d9d9d9;
+    }
