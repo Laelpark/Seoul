@@ -6,7 +6,7 @@
 	<title>shareContent.html</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<style  type="text/css">
-		.c {
+		.a {
 			float: inline-start;
 			display: inline-block;
 			background-color: rgb(224, 224, 224);
@@ -19,7 +19,22 @@
 			border-width: 1px;
 			border-color: rgb(193, 232, 100);
 			box-shadow: 3px 5px 6px rgb(142, 150, 150);
-			/* justify-content: end; */
+			/* justify-content: center; */
+		}
+
+		.b{
+			background-color: transparent;
+			border-width: 1px;
+			border-style: solid;
+			border-color: white;
+			height: 265px;
+			width: 300px;
+			margin-left: 30px;
+		}
+
+		.c{
+			height: 250px;
+			width: 900px;
 		}
 
 		.topBtn {
@@ -43,47 +58,67 @@
 	<nav class="navbar navbar-expand-lg bg-transparent">
 		<div class="topBtn collapse navbar-collapse" id="navbarSupportedContent">
 			<form class="d-flex" role="search">
-				<button type="button" class="btn btn-outline-danger me-2">취소</button>
+				<button type="button" class="btn btn-outline-danger me-4">취소</button>
 				<button type="button" class="btn btn-outline-success">저장</button>
 			</form>
 		</div>
 	</nav>
 	<nav class="navbar navbar-expand-lg">
-		<div class="c collapse navbar-collapse">
-			<ul class="navbar-nav mb-2 mt-2">
+		<div class="a collapse navbar-collapse">
+			<ul class="navbar-nav mb-2 mt-2 ms-3">
 				<li class="nav-item dropdown">
 					<img alt="" src="../img/user.png" style=" margin-left: 8px; width: 60px; height: 40px; border-radius: 100px;">
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						인원
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Action</a></li>
-						<li><a class="dropdown-item" href="#">Another action</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul>
+				<li>
+					<select class="form-select col ms-3 me-3" style="width: 180px; height: 50px;" id="emailSelect" required>
+						<option selected disabled value="">카테고리</option>
+						<option>치킨</option>
+					</select>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						시간
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Action</a></li>
-						<li><a class="dropdown-item" href="#">Another action</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<form class="d-flex" role="search">
-						<input class="form-control me-2 text-center" id= "searchBox" type="search" style="width: 200px;" placeholder="검색어를 입력하세요." aria-label="Search">
-						<button type="button" class="btn btn-outline-success bg-transparent" href="#">Search</button>
+					<form class="d-flex">
+						<input class="form-control me-2 text-center" id= "searchBox" type="text" style="width: 480px; height: 50px;" placeholder="검색어를 입력하세요." aria-label="Search">
 					</form>
+				</li>
+				<li>
+					<select class="form-select col ms-3 me-3" style="width: 180px; height: 50px;" id="emailSelect" required>
+						<option selected disabled value="">카테고리</option>
+						<option>치킨</option>
+					</select>
 				</li>
 			</ul>
 		</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg">
+		<div class="a collapse navbar-collapse" style="height: 300px;">
+			<div class="b me-3">
+				<div class="filebox">
+					<img src="" id="preview" width="250px;" id="preview">	
+					<label for="ex_file"></label>
+					<input type="file" id="ex_file" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+				</div>
+			</div>
+            <div class="ms-3">
+                <div class="c">
+                    <textarea class="form-control" id="validationTextarea" placeholder="주문하실 음식점 이름과 메뉴, 가격 등을 자세히 기재해주세요.
+                    " rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+	</nav>
+    <nav class="navbar navbar-expand-lg">
+		<div class="a collapse navbar-collapse" style="height: 250px;">
+			<div class="">
+				<div class="filebox">
+					
+				</div>
+			</div>
+            <div class="ms-3">
+                <div class="c">
+
+                </div>
+            </div>
+        </div>
 	</nav>
 
 	<!-- end --> 
