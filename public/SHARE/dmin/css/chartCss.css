@@ -1,4 +1,45 @@
-.a{
-    height: 60px;
-    width: 60px;
-}
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    background: rgba(158, 82, 190);
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+  }
+  
+  i {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: white;
+    font-weight: bold;
+  }
+
+  li i:hover {
+    background: none;
+    color: rgb(233, 231, 58);
+  }
+  
+  li #home {
+    background : none;
+  }
+  
+  .cd1 {
+    margin-left: 220px;
+  }
+
+  button {
+    border-style: none;
+    border-width: 0px;
+    border-color: transparent;
+    color: white;
+  }
+
+  .dropdown-menu {
+    height: auto;
+    background-color: transparent;
+  }
+
+ 
