@@ -14,45 +14,109 @@
 		<li><hr style="color: white;"></li>
 		<li><i class="fa-solid fa-sliders mb-2 ms-2">&nbsp 개요</i></li>
 		<li><i class="fas fa-light fa-user mb-2 ms-2">&nbsp 사용자 관리</i></li>
-		<li><i class="fas fa-regular fa-clipboard-list mb-2 ms-2 btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">&nbsp 쉐어팟 관리</i>
-			<div class="collapse" id="dashboard-collapse">
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-					<li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-					<li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-					<li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
-				</ul>
-			</div>
+		<li><i class="fas fa-regular fa-ban mb-2 ms-2">&nbsp 신고자 관리</i></li>
+		<li class="btn-group">
+			<i class="a fas fa-regular fa-clipboard-list ms-2 btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">&nbsp 쉐어리스트</i>
+			<ul class="b dropdown-menu">
+				<li class="mb-2">쉐어 팟 관리</li>
+				<li >쉐어 핫 관리</li>
+			</ul>
 		</li>
-		<li><i class="fas fa-regular fa-ban ms-2">&nbsp 신고자 관리</i></li>
 	</ul>
+		<div class="cd1">
+			<h4 class="pt-3">통계</h4>
+		</div>
+		<div class="cd2">
+			<div class="newmem row">
+				<p class="ps-3 col" style="font-weight: bold;">
+					Today 신규가입자 수:
+					<span class="num">128</span>
+					명
+				</p>
+				<p class="ps-3 offset-md-3 col-5" style="font-size: 12px; text-align: right;">
+					<i class="fa-solid fa-triangle-exclamation" style="color: red;"></i>
+					고객의 유입량이 어제보다 
+					<span class="persent">13%</span>
+					감소하였습니다.
+				</p>
+				<figure class="highcharts-figure">
+					<div id="container"></div>
+				</figure>
+			</div>
+		</div>
 
 
-
-	<div class="cd1">
-		<h3>통계</h3>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-		<p>내용</p>
-	</div>
 	<!-- end --> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
-	
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script type="text/javascript">
+		Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    xAxis: {
+        categories: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일','토요일'],
+        accessibility: {
+            description: 'Weekend'
+        }
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            formatter: function () {
+                return this.value + '명';
+            }
+        }
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: '어제',
+        marker: {
+            symbol: 'square'
+        },
+        data: [{
+            y: 26.4,
+            accessibility: {
+                description: 'Sunny symbol, this is the warmest point in the chart.'
+            }
+        }, 360, 355, 258, 220, 210, 158, 320]
+
+    }, {
+        name: '오늘',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [{
+            y: 1.5,
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+            },
+            accessibility: {
+                description: 'Snowy symbol, this is the coldest point in the chart.'
+            }
+        }, 210, 320, 120, 110, 160, 280, 302]
+    }]
+});
+	</script>
 </body>
 </html>
 
