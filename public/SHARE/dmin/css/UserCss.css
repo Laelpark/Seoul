@@ -1,0 +1,58 @@
+body {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-template-rows: 0.2fr 1.5fr 0.5fr;
+  grid-template-areas: 
+    "sidebar nav"
+    "sidebar main"
+    "sidebar footer";
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+.side {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 200px;
+  height: 100%;
+  background: rgba(158, 82, 190);
+  overflow: auto;
+  position: fixed;
+}
+
+li i {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: white;
+  background-color: transparent;
+}
+
+
+li i:hover {
+  background: none;
+  color: rgb(233, 231, 58);
+}
+
+.a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: white;
+  background-color: transparent;
+  border-style: none;
+  border-color: transparent;
+}
+
+#main {
+  grid-area: nav;
+}
+
+.a {
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 150px;
+}

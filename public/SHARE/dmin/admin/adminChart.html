@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>adminChart.html</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"      rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/chartCss.css">
 </head>
 <body style="background-color: rgb(224, 224, 224);">
@@ -12,28 +12,22 @@
 	<ul class="side">
 		<img id="home" class="ms-2 mt-1" src="../../user/img/fullLogo_w.png" style="width: 130px; height: 50px;">
 		<li><hr style="color: white;"></li>
-		<li><i class="fa-solid fa-sliders mb-2 ms-2">&nbsp 개요</i></li>
-		<li><i class="fas fa-light fa-user mb-2 ms-2">&nbsp 사용자 관리</i></li>
+		<li><i class="fa-solid fa-sliders mb-2 ms-2" style="color: rgb(233, 231, 58);" onclick="location.href='../admin/adminChart.html'">&nbsp 통계</i></li>
+		<li><i class="fas fa-light fa-user mb-2 ms-2"  onclick="location.href='../admin/adminUser.html'">&nbsp 사용자 관리</i></li>
 		<li><i class="fas fa-regular fa-ban mb-2 ms-2">&nbsp 신고자 관리</i></li>
-		<li class="btn-group">
-			<i class="a fas fa-regular fa-clipboard-list ms-2 btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">&nbsp 쉐어리스트</i>
-			<ul class="b dropdown-menu">
-				<li class="mb-2">쉐어 팟 관리</li>
-				<li >쉐어 핫 관리</li>
-			</ul>
-		</li>
+        <li><i class="fas fa-regular fa-clipboard-list ms-2">&nbsp 쉐어리스트</i></li>
 	</ul>
     <div class="cd1">
         <h4 class="pt-3">통계</h4>
     </div>
     <div class="cd2">
         <div class="newmem row">
-            <p class="ps-3 col" style="font-weight: bold;">
+            <p class="ps-3 col mt-4" style="font-weight: bold;">
                 Today 신규가입자 수:
                 <span class="num">nn</span>
                 명
             </p>
-            <p class="ps-3 offset-md-3 col-5" style="font-size: 12px; text-align: right;">
+            <p class="ps-3 offset-md-3 col-5 mt-4" style="font-size: 12px; text-align: right;">
                 <i class="fa-solid fa-triangle-exclamation" style="color: red;"></i>
                 고객의 유입량이 어제보다 
                 <span class="persent">13%</span>
