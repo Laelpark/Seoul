@@ -1,4 +1,4 @@
-ul {
+.side {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
@@ -79,7 +79,7 @@ ul {
     width: 950px;
     height: 1200px;
     background: white;
-    overflow: auto;
+    overflow: hidden;
   }
 
   .newmem {
@@ -87,7 +87,6 @@ ul {
     border-width: 1px;
     border-color: lightgray;
     width: 900px;
-
     margin-left: 30px;
     margin-top: 30px;
     z-index: 1;
@@ -95,6 +94,10 @@ ul {
 
   .num {
     color:  rgb(233, 231, 58);
+  }
+
+  .hot {
+    color:  red;
   }
 
   .persent {
@@ -143,4 +146,25 @@ ul {
 
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
+}
+
+
+.newmem2 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  width: 900px;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+.sharepot {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  width: 860px;
+  margin-left: 10px;
+  z-index: 1;
+  text-align: center;
+  border-radius:5px;
 }
