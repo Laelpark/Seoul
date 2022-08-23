@@ -8,34 +8,76 @@
 	<link rel="stylesheet" type="text/css" href="../css/UserCss.css">
 </head>
 <body style="background-color: rgb(224, 224, 224);">
-
-    <header>
+    <div class="container">
+        <nav>
+            <div id="main">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active"  data-toggle="tab" href="#">사용자목록</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#">신규회원관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#">회원신고관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="cd2">
+                <p class="Userlist mt-4" style="font-weight: bold;">
+                    전체사용자
+                    <span class="num">nnn</span>
+                    명
+                </p>
+                <div class="menuout" >
+                    <div id="menu1">
+                        <ul>
+                            <li>닉네임</li>
+                            <li></li>
+                            <li>계정</li>
+                            <li></li>
+                            <li>가입일</li>
+                            <li></li>
+                            <li>쉐어횟수</li>
+                            <li></li>
+                            <li></li>
+                            <li> 
+                                <select>
+                                    <option selected disabled value="">선택</option>
+                                    <option>상태</option>
+                                    <option>게시글 수</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
         <div id="sidebar">
-            <ul class="side">
-                <img id="home" class="ms-2 mt-1" src="../../user/img/fullLogo_w.png" style="width: 130px; height: 50px;">
-                <li><hr style="color: white;"></li>
-                <li><i class="fa-solid fa-sliders mb-2 ms-2"  onclick="location.href='../admin/adminChart.html'">&nbsp 통계</i></li>
-                <li><i class="fas fa-light fa-user mb-2 ms-2"  onclick="location.href='../admin/adminUser.html'" style="color: rgb(233, 231, 58);">&nbsp 사용자 관리</i></li>
-                <li><i class="fas fa-regular fa-ban mb-2 ms-2">&nbsp 신고자 관리</i></li>
-                <li><i class="fas fa-regular fa-clipboard-list ms-2">&nbsp 쉐어리스트</i></li>
-            </ul>
+            <div class="side_img">
+                <img id="home" src="../../user/img/fullLogo_w.png">
+            </div>
+            <div class="side_info">
+                <hr style="color: white;">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-sliders" onclick="location.href='../admin/adminChart.html'">&nbsp 통계</i>
+                    </li>
+                    <li>
+                        <i class="fas fa-light fa-user" style="color: rgb(233, 231, 58);" onclick="location.href='../admin/adminUser.html'">&nbsp 사용자 관리</i>
+                    </li>
+                    <li>
+                        <i class="fas fa-regular fa-ban">&nbsp 신고자 관리</i>
+                    </li>
+                    <li>
+                        <i class="a fas fa-regular fa-clipboard-list">&nbsp 쉐어리스트</i>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
-    <main>
-        <div id="main">
-            <ul class="a nav nav-tabs">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="background-color: rgba(233, 231, 58, 0.71);">사용자 목록</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">신규회원관리</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">회원관리</a>
-                </li>
-            </ul>
-        </div>
-    </main>
+    </div>
     <!-- <footer>
         <nav aria-label="Page navigation example">
             <ul class="pagination">
