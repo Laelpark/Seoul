@@ -132,3 +132,7 @@ li i {
 select {
   text-decoration: none;
 }
+
+footer {
+  margin-left: 20px;
+}

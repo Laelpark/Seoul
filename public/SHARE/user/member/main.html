@@ -31,8 +31,27 @@
 							</a>
 						</li>
 						<li class="">
-							<a class="nav-link py-2 px-0 px-lg-2 me-2" href="#" style="color: rgb(193, 232, 100); cursor: pointer;">
-								<i class="fa-solid fa-star fa-lg"></i>
+							<a class="nav-link py-2 px-0 px-lg-2 me-2" style="cursor: pointer;">
+								<i style="color: rgb(193, 232, 100);" class="fa-solid fa-star fa-lg" type="button" onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"></i>
+								<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalCenterTitle">로그인을 해주세요.</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body"  align="center">
+												<i class="fas fa-light fa-circle-exclamation" style="color: red;"></i>
+												저장된 리스트가 없습니다.
+											</div>
+											<div class="modal-footer">
+												<a href="../member/main.html">
+													<button type="button" class="btn btn-primary">확인</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</a>
 						</li>
 						<li class="nav-item col-4 me-2">
