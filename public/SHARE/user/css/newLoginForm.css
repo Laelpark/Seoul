@@ -1,0 +1,21 @@
+#newmem {
+    color: rgb(233, 231, 58); 
+    text-shadow: 2px 2px 2px rgb(100, 100, 100);
+    font: 200;
+}
+
+#input {
+    margin-top: 35px;
+    margin-left: 500px;
+}
+
+.a {
+    border-color: transparent;
+    width: 500px;
+    height: 30px;
+}
+
+#select {
+    width: 200px;
+    margin-left: 600px;
+}

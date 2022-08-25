@@ -78,6 +78,10 @@
 			position: relative;
 			left: 40%;
 		}
+
+		#menu {
+			margin-right: 80px;
+		}
 	</style>
 </head>
 <body>
@@ -85,7 +89,7 @@
 	<form>
 		<nav class="navbar" style="background-color:rgb(142, 68, 173); height: 100%;">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="../member/LoginDoneMain.html">
+				<a class="navbar-brand" href="../member_Login_Done/LoginDoneMain.html">
 					<img src="../img/fullLogo_w.png" alt="" width="160px" height="60px" class="d-inline-block align-text-top">
 				</a>
 				<div class="info pt-5">
@@ -95,21 +99,21 @@
 						<span style="color: white; text-shadow: 2px 2px black;" class="fw-bold fs-4" onclick="location.href='../member_Login_Done/shareContent_logDone.html'">Share Now</span>
 					</a>
 				</div>
-				<div>
-					<ul class="navbar-nav flex-row ms-md-auto pe-3">
-						<li class="nav-item col-4 me-2">
+				<div id="menu">
+					<ul class="navbar-nav flex-row ms-md-auto me-4">
+						<li class="nav-item col-4"></li>
+						<li class="nav-item col-4">
 							<a class="nav-link py-2 px-0 px-lg-2" href="" style="color: rgb(193, 232, 100); cursor: pointer;">
 								<i class="fa-solid fa-user fa-lg"></i>
 							</a>
 						</li>
 						<li class="">
-							<a class="nav-link py-2 px-0 px-lg-2 me-2" href="#" style="color: rgb(193, 232, 100); cursor: pointer;">
-								<i class="fa-solid fa-star fa-lg"  onclick="location.href='../member_Login_Done/shareLike_List_logDone.html'"></i>
+							<a class="nav-link py-2 px-0 px-lg-2" href="#" style="color: rgb(193, 232, 100); cursor: pointer;">
+								<i class="fa-solid fa-star fa-lg"  onclick="location.href='../member_Login_Done/shareLike_List.html'"></i>
 							</a>
 						</li>
-						<li class="nav-item col-4 me-2">
-						</li>
 					</ul>
+					<span style="color: white; text-shadow: 2px 2px black; float: right;" class="">Welcome to SHARE!</span>
 				</div>	
 			</div>
 	  	</nav>

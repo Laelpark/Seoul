@@ -38,55 +38,68 @@
 <body style="background-color: rgb(224, 224, 224);">
 	<!-- start -->
 		<div class="navbar" style="background-color:rgb(142, 68, 173); height: 50px;">
-			<div>
-				<i class="b fas fa-light fa-house ms-5 col-6" onclick="location.href='../../user/member/main.html'">
-					<p class="col-6" style="font-size: 10px;">HOME</p>
-				</i>
-			</div>
+			<div class="col-6"></div>
 			<i class="c fas fa-light fa-circle-info me-5"> 관리자 로그인</i>
 		</div>
 		<div class="container-fluid">
 			<div class="row pt-5">
-				<div class="col-12 text-center mb-3">
-					<img alt="" src="../../user/img/fullLogo_p.png"  style="width: 280px; height: 100px">
-				</div>
+				<a class="col-12 text-center mb-3" >
+					<img alt="" src="../../user/img/fullLogo_p.png" onclick="location.href='../../user/member/main.html'" style="width: 280px; height: 100px; cursor: pointer;">
+				</a>
 				<div class="col-12 text-center mb-3">
 					<img alt="" src="../../user/img/user.png"  style="width: 100px; height: 100px; border-radius: 100px;">
 				</div>
-				<div class="input-group co[[[l-3 offset-4 text-center">
+				<div class="col-4 offset-4 text-center">
+					<div class="input-group has-validation">
+						<span class="input-group-text" id="inputGroupPrepend">
+							<i class="fa-solid fa-user p-3 d-grid" style="font-size: 23px; height: 55px;"></i>
+						</span>
+						<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+					</div>
+				</div>
+				<!-- <div class="input-group col-3 offset-4 text-center">
 					<span class="input-group-text" id="idimg">
 						<i class="fa-solid fa-user p-3 d-grid" style="font-size: 23px; height: 55px;"></i>
 					</span>
 					<input class="id" type="text" id="id"  placeholder="ID" aria-describedby="inputGroupPrepend" required>
-				</div>
-				<div class="form-check col-3 offset-4 mb-3">
+				</div> -->
+				<div class="offset-4 form-check col-4 mt-2" id="rememberId">
 					<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
 					<label class="form-check-label" for="flexCheckDefault">
-						Default checkbox
+						아이디 저장
 					</label>
 				</div>
-				<div class="input-group col-3 offset-4 text-center">
+				<div class="col-2 text-center">
+					<button type="button" id="loginBtn" class="btn" style=" width: 100px; height: 70px; float: right; background-color: blueviolet; color: white;" href="#" onclick="location.href='../member_Login_Done/LoginDoneMain.html'">로그인</button>
+				</div>
+				<div class="col-4 offset-4 text-center">
+					<div class="input-group has-validation">
+						<span class="input-group-text" id="inputGroupPrepend">
+							<i class="fas fa-solid fa-lock p-3 d-grid" style="font-size: 20px;  height: 55px;"></i>
+						</span>
+						<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+					</div>
+				</div>
+				<!-- <div class="input-group col-3 offset-4 text-center">
 					<span class="input-group-text" id="pwimg">
 						<i class="fas fa-solid fa-lock p-3 d-grid" style="font-size: 23px;  height: 55px;"></i>
 					</span>
 					<input class="pw" type="text" id="pw"  placeholder="PASSWORD" aria-describedby="inputGroupPrepend" required>
+				</div> -->
+				<div class="col-2 offset-4 form-check mb-3 mt-2">
+					<input class="form-check-input" type="checkbox" id="flexCheckDefault" checked>
+					<label class="form-check-label" for="flexCheckDefault">자동 로그인 </label>
 				</div>
-				<div class="col-2 offset-4 m3-3 form-switch mb-3">
-					<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-					<label class="form-check-label" for="flexSwitchCheckChecked">Autolog </label>
-				</div>
-				<div class="col-4 offset-4 mb-3 inline-block text-center">
-					<button type="button" class="btn" style=" width: 450px; height: 70px; background-color: blueviolet; color: white;" onclick="location.href='../../dmin/admin/adminChart.html'">login</button>
-				</div>
-				<div class="container text-center">
-					<div class="row" onclick="location.href='../member/newLoginForm.html'">
-					  <div class="a col offset-4 me-3">
+				<div class="container text-center mt-3">
+					<div class="row" type="button" onclick="location.href='../member/newLoginForm.html'">
+					<div class="col-3"></div>
+					  <div class="a col-3 me-3">
 						회원가입
 					  </div>
-					  <div class="a col ms-5 ps-5" href="#">
-						비밀번호/아이디 찾기
+					  <div class="a col-3" href="#">
+						아이디/비밀번호 찾기
 					  </div>
-					  <div class="col offset-4"></div>
+					  <div class="col-3"></div>
 					</div>
 				</div>
 			</div>
