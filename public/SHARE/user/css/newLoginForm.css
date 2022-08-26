@@ -11,11 +11,20 @@
 
 .a {
     border-color: transparent;
-    width: 500px;
+    width: 200px;
     height: 30px;
 }
 
 #select {
     width: 200px;
-    margin-left: 600px;
+    
+    /* margin-left: 600px; */
+}
+
+ul {
+    list-style:none;
+}
+
+#lock {
+    font-size: 25px;
 }

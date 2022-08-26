@@ -16,52 +16,58 @@
 	</div>
 	<div id="input">
 		<span>아이디
-			<input class="a">
+			<input class="a ms-3">
 		</span>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
-		<span>비밀번호
-			<input class="a">
-		</span>
+		<div class="row position-relative">
+			<span>
+				비밀번호
+				<input type="password" class="a ms-3 col-4">
+				<i class="fa-solid fa-lock col-3 offset-3" id="lock"></i>
+			</span>
+		</div>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
-		<span>비밀번호 확인
-			<input class="a">
-		</span>
+		<div class="row position-relative">
+			<span>
+				비밀번호 확인
+				<input type="password" class="a ms-3 col-4">
+				<i class="fa-solid fa-lock-open col-3 offset-2" id="lock"></i>
+			</span>
+		</div>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
 		<span>이름
-			<input class="a">
+			<input class="a ms-3">
 		</span>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
 		<span>생년월일
-			<input class="a">
+			<input class="a ms-3">
 		</span>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
-		<span>성별
-			<select id="select" class="form-select" id="validationCustom01" requiredss>
-				<option>선택</option>
-				<option>남성</option>
-				<option>여성</option>
-			</select>
-		</span>
+		<span>성별</span>
+		<select id="select" class="form-select" requiredss>
+			<option>선택</option>
+			<option>남성</option>
+			<option>여성</option>
+		</select>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
-		<span>이메일
-			<select id="select" class="form-select" id="validationCustom01" requiredss>
-				<option>선택</option>
-				<option>naver</option>
-				<option>daum</option>
-				<option>gmail</option>
-			</select>
-		</span>
+		<span>이메일</span>
+		<select id="select" class="form-select" requiredss>
+			<option>선택</option>
+			<option>naver</option>
+			<option>daum</option>
+			<option>gmail</option>
+		</select>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
-		<ul>
-			<span class="col">전화번호</span>
-			<select style="width: 100px;" class="col form-select" id="validationCustom01" requiredss>
+		<span>전화번호</span>
+		<div class="row" id="select">
+			<select class="col-md-3 form-select" requiredss>
 				<option>선택</option>
 				<option>SKT</option>
 				<option>KT</option>
 				<option>LG</option>
 			</select>
-			<input class="a">
-		</ul>
+			<input class="a col-md-3">
+		</div>
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
 		<span>인증번호 입력
 			<input class="a">
