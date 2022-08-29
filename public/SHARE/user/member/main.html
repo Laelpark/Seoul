@@ -40,7 +40,6 @@
 								</div>
 							</div>
 						</span>
-					
 					</a>
 				</div>
 				<div>
@@ -52,7 +51,7 @@
 						</li>
 						<li class="">
 							<a class="nav-link py-2 px-0 px-lg-2 me-2" style="cursor: pointer;">
-								<i style="color: rgb(193, 232, 100);" class="fa-solid fa-star fa-lg" type="button" onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"></i>
+								<i style="color: rgb(193, 232, 100);" class="fa-solid fa-star fa-lg" type="button" onclick=deleteValue(2); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"></i>
 								<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered">
 										<div class="modal-content">
@@ -133,10 +132,22 @@
 									<button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 										종류
 									</button>
-									<ul class="dropdown-menu mt-5">
+									<ul class="dropdown-menu mt-5" style="background-color: rgb(226, 225, 225)">
+										<li><a class="dropdown-item" href="#">족발,보쌈</a></li>
+										<li><a class="dropdown-item" href="#">찜,탕,찌개</a></li>
+										<li><a class="dropdown-item" href="#">돈까스,회,일식</a></li>
 										<li><a class="dropdown-item" href="#">피자</a></li>
+										<li><a class="dropdown-item" href="#">고기,구이</a></li>
+										<li><a class="dropdown-item" href="#">양식</a></li>
 										<li><a class="dropdown-item" href="#">치킨</a></li>
-										<li><a class="dropdown-item" href="#">보쌈/족발</a></li>
+										<li><a class="dropdown-item" href="#">중식</a></li>
+										<li><a class="dropdown-item" href="#">아시안</a></li>
+										<li><a class="dropdown-item" href="#">백반,죽,국수</a></li>
+										<li><a class="dropdown-item" href="#">도시락</a></li>
+										<li><a class="dropdown-item" href="#">분식</a></li>
+										<li><hr class="dropdown-divider"></li>
+										<li><a class="dropdown-item" href="#">카페,디저트</a></li>
+										<li><a class="dropdown-item" href="#">그외 음식</a></li>
 									</ul>
 								</div>
 								<input class="search form-control" type="search" id="search" placeholder="검색어를 입력해주세요." />
