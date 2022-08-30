@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CodeGroupFrom.html</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<style  type="text/css">
+	.info {
+		cursor:pointer;
+	}
+	.userimg {
+		margin-right: 20px;
+	}
+	.a {
+		width: 400px;
+		height: 30px;
+	}
+	.d{
+		height: 100px;
+	}
+	.header {
+		height: 80px;
+	}
+	.container {
+		margin-top: 130px;
+		float: right;
+		flex-flow: row nowrap;
+	}
+	.content {
+		margin-top: 20px;
+	}
+	.sidebar {
+		margin-top: 78px;
+		float: left;
+		width: 15%;
+		height: auto;
+		top: 0;
+		background: yellowgreen;
+	}
+	</style>
+	</head>
+	<body>
+		<!-- start -->
+		<div class="header">
+			<div class="row d">
+				<nav class="navbar bg-light col">
+					<div class="col container-fluid">
+						<a class="navbar-brand" href="#">
+							<img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="align-text-top ms-5">
+							<span></span> Management System
+						</a>
+					</div>
+					<div class="row offset-6">
+						<div class="userimg col">
+							<img alt="" src="../../user/img/user.png" style=" width: 60px; height: 40px;border-radius: 100px;" class="me-4 mb-4 ">
+							<span id="nm" class="d-inline-block">Tony Chang <br> Administrator</span>
+						</div>
+					</div>
+					<div class="col">
+						<select class="form-select col" id="emailSelect" required style="width: 90px;">
+							<option selected>언어</option>
+							<option>한국어</option>
+						</select>
+					</div>
+				</nav>
+			</div>
+			<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Navbar</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a class="nav-link active" aria-current="page" href="#">회원관리</a>
+							<a class="nav-link" href="#">서비스관리</a>
+							<a class="nav-link" href="#">사이트관리</a>
+							<a class="nav-link" href="#">로그관리</a>
+							<a class="nav-link" href="#">시스템관리</a>
+							<a class="nav-link" href="#">시스템관리</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<h2 class="needs-validation ms-5 ps-3 mt-2">코드그룹 관리</h2>
+		</div>
+		<div class="container">
+			<div class="content">
+				<div class="row">
+					<div class="col">
+						<label>코드그룹 코드</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>코드그룹 코드(Another)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				
+				<div class="row mt-3">
+					<div class="col">
+						<label>코드그룹 이름(한글)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>코드그룹 이름(영문)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>사용여부</label>
+						<table>
+							<td>
+								<select class="a select mt-2" requiredss>
+									<option></option>
+									<option>Y</option>
+									<option>N</option>
+								</select>
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>순서</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>설명</label>
+						<table>
+							<td>
+								<textarea class="a form-control mt-2" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>삭제여부</label>
+						<table>
+							<td>
+								<select class="a select mt-2" requiredss>
+									<option></option>
+									<option>Y</option>
+									<option>N</option>
+								</select>
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>예비1 (Varchar type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>예비2 (Varchar type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>예비3 (Varchar type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>예비1 (Int type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col">
+						<label>예비2 (Int type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<label>예비3 (Int type)</label>
+						<table>
+							<td>
+								<input class="a mt-2">
+							</td>
+						</table>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col">
+						<table>
+							<td>
+								<button class="btn btn-danger del" type="button" onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa-solid fa-trash-can"></i></button>
+								<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalCenterTitle">삭제하시겠습니까?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body"  align="center">
+												<img src="./DLlogo.png" class="rounded me-2" alt="..." style="width: 8%; height: 8%;">
+												삭제된 정보는 복구할 수가 없습니다.
+											</div>
+											<div class="modal-footer">
+												<a>
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+												</a>
+												<a href="./memberList.html">
+													<button type="button" class="btn btn-danger">삭제</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</table>
+					</div>
+					<div class="col offset-3"></div>
+					<div class="col">
+						<table>
+							<td>
+								<button href="./memberReg.html" class="btn btn-primary" type="button"><i class="fa-solid fa-plus"></i></button>
+							</td>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		
+			
+		<!-- end --> 
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
+		<script>
+			const fileInput = document.getElementById("fileUpload");
+			fileInput.onchange = () => {
+				const selectedFile = [...fileInput.files];
+				console.log(selectedFile);
+			};
+			fileInput.addEventListener("change", handleFiles);
+
+			const toastTrigger = document.getElementById('savebtn')
+			const toastLiveExample = document.getElementById('liveToast')
+			if (toastTrigger) {
+				toastTrigger.addEventListener('click', () => {
+					const toast = new bootstrap.Toast(toastLiveExample)
+
+					toast.show()
+				})
+			}
+
+			function checkSelectAll()  {
+				// 전체 체크박스
+				const checkboxes 
+					= document.querySelectorAll('input[name="chk_box"]');
+				// 선택된 체크박스
+				const checked 
+					= document.querySelectorAll('input[name="chk_box"]:checked');
+				// select all 체크박스
+				const selectAll 
+					= document.querySelector('input[name="chk_all"]');
+				
+				if(checkboxes.length === checked.length)  {
+					selectAll.checked = true;
+				}else {
+					selectAll.checked = false;
+				}
+
+			}
+			// 하위 체크박스 전체 선택시 전체박스 체크
+			function checkAll(selectAll)  {
+				const checkboxes 
+					= document.getElementsByName('chk_box');
+				
+				checkboxes.forEach((checkbox) => {
+					checkbox.checked = selectAll.checked
+				})
+			}
+			function deleteValue(){
+				var ur1 = "delete";
+				var valueArr = new Array();
+				var list = $()
+			}
+			function newPage() {
+				window.location.href = './memberMod.html'
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
