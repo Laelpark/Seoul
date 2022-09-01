@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CodeGroupForm.html</title>
+	<title>CodeGroupModForm.html</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/CodeGroupList.css">
 	</head>
@@ -98,21 +98,21 @@
 								<div class="row">
 									<div class="col">
 										<label for="codeGroup_code" class="form-label">코드그룹 코드</label>
-										<input type="text" class="form-control" id="codeGroup_code" placeholder="영문(대소문자),숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_code" required>	
 									</div>
 									<div class="col">
 										<label for="codeGroup_another" class="form-label">코드그룹 코드(Another)</label>
-										<input type="text" class="form-control" id="codeGroup_another" placeholder="영문(대소문자),숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_another" required>	
 									</div>
 								</div>
 								<div class="row mt-3">
 									<div class="col">
 										<label for="codeGroup_kr" class="form-label">코드그룹 이름(한글)</label>
-										<input type="text" class="form-control" id="codeGroup_kr" placeholder="한글,숫자" required>
+										<input type="text" class="form-control" id="codeGroup_kr" required>
 									</div>
 									<div class="col">
 										<label for="codeGroup_eng" class="form-label">코드그룹 이름(영문)</label>
-										<input type="text" class="form-control" id="codeGroup_eng" placeholder="영문(대소문자),숫자" required>
+										<input type="text" class="form-control" id="codeGroup_eng" required>
 									</div>
 								</div>
 								<div class="row mt-3">
@@ -132,7 +132,7 @@
 								<div class="row mt-3">
 									<div class="col">
 										<label for="codeGroup_con" class="form-label">설명</label>
-										<textarea class="form-control" id="codeGroup_con" placeholder="Required example textarea" required></textarea>
+										<textarea class="form-control" id="codeGroup_con"  required></textarea>
 									</div>
 									<div class="col">
 										<label for="codeGroup_del" class="form-label">삭제여부</label>
@@ -146,69 +146,43 @@
 								<div class="row mt-3">
 									<div class="col">
 										<label for="codeGroup_V1" class="form-label">예비1(Varchar type)</label>
-										<input type="text" class="form-control" id="codeGroup_V1" placeholder="영문(대소문자),숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_V1" required>	
 									</div>
 									<div class="col">
 										<label for="codeGroup_V2" class="form-label">예비2(Varchar type)</label>
-										<input type="text" class="form-control" id="codeGroup_V2" placeholder="영문(대소문자),숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_V2" required>	
 									</div>
 								</div>
 								<div class="row mt-3">
 									<div class="col-6">
 										<label for="codeGroup_V3" class="form-label">예비3(Varchar type)</label>
-										<input type="text" class="form-control" id="codeGroup_V3" placeholder="영문(대소문자),숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_V3" required>	
 									</div>
 								</div>
 								<div class="row mt-3">
 									<div class="col">
 										<label for="codeGroup_I1" class="form-label">예비1 (Int type)</label>
-										<input type="text" class="form-control" id="codeGroup_I1" placeholder="숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_I1" required>	
 									</div>
 									<div class="col">
 										<label for="codeGroup_I2" class="form-label">예비2 (Int type)</label>
-										<input type="text" class="form-control" id="codeGroup_I2" placeholder="숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_I2" required>	
 									</div>
 								</div>
 								<div class="row mt-3">
 									<div class="col-6">
 										<label for="codeGroup_I3" class="form-label">예비3(Int type)</label>
-										<input type="text" class="form-control" id="codeGroup_I3" placeholder="숫자" required>	
+										<input type="text" class="form-control" id="codeGroup_I3" required>	
 									</div>
 								</div>
 								<div class="row mt-3">
 									<div class="col-md-2"> 
-										<button class="btn" type="button" style="background-color: rgb(159, 160, 161);" onclick="location.href='../admin/CodeGroupList.html'">
-											<i class="fas fa-thin fa-list-ul"></i>
-										</button>
+										<button class="btn" type="button" style="background-color: rgb(159, 160, 161);"><i class="fas fa-thin fa-list-ul"></i></button>
 									</div>
 									<div class="col-md-6 offset-md-4" align="right">
-										<button class="btn btn-danger del" type="button" ><i class="fa-solid fa-xmark"></i></button>
-										<button class="btn btn-danger" type="button"onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa-solid fa-trash-can"></i></button>
-										<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-											<div class="modal-dialog modal-dialog-centered">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalCenterTitle">삭제하시겠습니까?</h5>
-														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-													</div>
-													<div class="modal-body"  align="center">
-														<i class="fas fa-light fa-triangle-exclamation me-2" style="color: red;"></i>
-														삭제된 정보는 복구할 수가 없습니다.
-													</div>
-													<div class="modal-footer">
-														<a>
-															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-														</a>
-														<a onclick="location.href='../admin/CodeGroupList.html'">
-															<button type="button" class="btn btn-danger">삭제</button>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<a class="btn btn-success" href="../admin/CodeGroupModForm.html" onclick=here()><i class="fa-regular fa-bookmark"></i></a>
-										
-										<!-- <button class="btn btn-success" type="button" href="../admin/CodeGroupModForm.html" onclick=here()><i class="fa-regular fa-bookmark"></i></button> -->
+										<a href="./memberReg.html">
+											<button class="btn btn-danger" type="button"><i class="fa-solid fa-trash-can"></i></i></button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -238,17 +212,66 @@
 					toast.show()
 				})
 			}
-			// 데이터 전송
-		function here() {
-			var code = document.getElementById("codeGroup_code").src;
-			var codeGroup_another = document.getElementById("codeGroup_another").value;
-			var chiness = document.getElementById("codeGroup_kr").value;
-			var english = document.getElementById("codeGroup_eng").value;
-			sessionStorage.setItem("codeGroup_code", code);
-			sessionStorage.setItem("codeGroup_another", another);
-            sessionStorage.setItem("codeGroup_kr", kr);
-			sessionStorage.setItem("codeGroup_eng", eng);
-			
+
+		// var img = sessionStorage.getItem("img");
+		// var name = sessionStorage.getItem("name");
+		// document.getElementById("preview").src = img;
+		// document.getElementById("name").value = name;
+
+		
+		// var img = sessionStorage.getItem("img");
+		// document.getElementById("preview").src = img;
+		// var name = sessionStorage.getItem("name");
+		// document.getElementById("name").value = name;
+
+		// const myModal = document.getElementById('myModal')
+		// const myInput = document.getElementById('myInput')
+
+		// myModal.addEventListener('shown.bs.modal', () => {
+		// 	myInput.focus()
+		// })
+		
+		// 데이터 받아오기
+		var code = sessionStorage.getItem("codeGroup_code").value;
+		var codeGroup_another = sessionStorage.getItem("codeGroup_another");
+		var chiness = sessionStorage.getItem("codeGroup_kr").value;
+		var english = sessionStorage.getItem("codeGroup_eng").value;
+		document.getElementById("codeGroup_code", code).src = code;
+		document.getElementById("codeGroup_another", another).value = another;
+		document.getElementById("codeGroup_kr", kr).value = kr;
+		document.getElementById("codeGroup_eng", eng).value = eng;
+
+
+		const myModal = document.getElementById('myModal')
+		const myInput = document.getElementById('myInput')
+
+		myModal.addEventListener('shown.bs.modal', () => {
+			myInput.focus()
+		})
+
+		function save() {
+			// var name = sessionStorage.setItem("name");
+			// var name = sessionStorage.setItem("name_cn");
+			// sessionStorage.setItem("name", name);
+			// sessionStorage.setItem("name_cn", chiness);
+
+		var code = sessionStorage.setItem("codeGroup_code");
+		var codeGroup_another = sessionStorage.setItem("codeGroup_another");
+		var chiness = sessionStorage.setItem("codeGroup_kr").value;
+		var english = sessionStorage.setItem("codeGroup_eng").value;
+		sessionStorage.setItem("codeGroup_code", code).src = code;
+		sessionStorage.setItem("codeGroup_another", another).value = another;
+		sessionStorage.setItem("codeGroup_kr", kr).value = kr;
+		sessionStorage.setItem("codeGroup_eng", eng).value = eng;
+		}
+	
+
+
+		function save() {
+			var name = sessionStorage.setItem("name");
+			sessionStorage.setItem("name", name);
+			var name = sessionStorage.setItem("name_cn");
+			sessionStorage.setItem("name_cn", chiness);
 		}
 		</script>
 	</body>
