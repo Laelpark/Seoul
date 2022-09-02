@@ -123,7 +123,31 @@
 		<hr style="color: rgb(78, 78, 78); width: 800px;">
 	</div>
 	<div id="wrapper" class="mt-5 mb-3">
-		<button id="done" type="submit" class="btn btn-primary btn-lg" onclick="location.href='../member/welcomeLogin.html'" href="">가입하기</button>
+		<button id="done" type="submit" class="btn btn-primary btn-lg" onclick=deleteValue(); data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+			가입하기
+		</button>
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">가입완료</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body"  align="center">
+						<i class="fa-regular fa-thumbs-up" style="color: rgb(24, 82, 24);"></i>
+						Share의 가입이 성공적으로 완료되었습니다.
+					</div>
+					<div class="modal-footer">
+						<a href="../member/main.html">
+							<button type="button" class="btn btn-secondary">확인</button>
+						</a>
+						<a href="../member/loginForm.html">
+							<button type="button" class="btn btn-success">로그인하기</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 

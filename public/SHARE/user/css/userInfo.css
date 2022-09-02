@@ -1,0 +1,63 @@
+#logoimg {
+    width: 230px;
+    height: 80px;
+    margin: 30px 20px;
+}
+
+.nav-link {
+  margin-left: 10px;
+}
+
+ul {
+    border-style: solid;
+    border: 1px;
+}
+dl, ol, ul {
+    margin: 5px 150px;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+h5 {
+   padding-left: 30px;
+   padding-top: 20px;
+}
+
+#bgc {
+    margin-left: 160px;
+    margin-top: 20px;
+    background-color: rgba(224, 224, 224);
+    height: 350px;
+}
+
+#userimg {
+    width: 50px;
+    height: 20px;
+}
+
+#imgload {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    margin: 50px 20px;
+}
+
+#preview {
+    width: 250px; 
+    height: 200px;
+    margin: 20px 20px;
+}
+
+hr {
+    margin-left: 150px;
+    width: 1337px;
+}
