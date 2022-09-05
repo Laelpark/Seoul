@@ -1,3 +1,26 @@
+#content {
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+#content1 {
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+#content2 {
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+#side {
+    padding: 20px 30px;
+    background-color:  rgba(224, 224, 224);
+}
+
 #logoimg {
     width: 230px;
     height: 80px;
@@ -12,52 +35,29 @@ ul {
     border-style: solid;
     border: 1px;
 }
+
 dl, ol, ul {
     margin: 5px 150px;
     margin-bottom: 1rem;
 }
+
 ol, ul {
     padding-left: 2rem;
 }
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
 
-h5 {
-   padding-left: 30px;
-   padding-top: 20px;
-}
-
-#bgc {
-    margin-left: 160px;
-    margin-top: 20px;
-    background-color: rgba(224, 224, 224);
-    height: 350px;
-}
-
-#userimg {
-    width: 50px;
-    height: 20px;
-}
-
-#imgload {
+#textBox {
+    width: 300px;
     text-align: center;
-    margin-top: 60px;
-}
+    align-content: center;
+}s
 
-.btn {
-    width: 100px;
-    height: 50px;
-    margin: 50px 20px;
-}
-
-#preview {
-    width: 250px; 
-    height: 200px;
-    margin: 20px 20px;
-}
-
-hr {
-    margin-left: 150px;
-    width: 1337px;
+#btn {
+    background-color: lightgrey;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
 }
