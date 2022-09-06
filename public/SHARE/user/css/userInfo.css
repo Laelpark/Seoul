@@ -6,7 +6,7 @@
 
 #content1 {
     height: 130px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 150px;
 }
 
@@ -60,4 +60,10 @@ ol, ul {
     border-style: solid;
     border-width: 1px;
     border-color: grey;
+}
+
+#preview {
+    width: 100px;
+    height: 100px;
+
 }
