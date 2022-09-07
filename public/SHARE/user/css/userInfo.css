@@ -1,69 +1,37 @@
-#content {
-    height: 200px;
+.bgc {
+    background-color: rgba(224, 224, 224, 0.29);
+    margin: 50px;
+    height: 800px;
+    border-radius: 30px;
+}
+
+#Logo{
+    width: 220px;
+    height: 80px;    
+    float: right;
+    margin-right: 55px;
     margin-top: 10px;
-    margin-left: 150px;
 }
 
-#content1 {
-    height: 130px;
-    margin-top: 20px;
-    margin-left: 150px;
-}
-
-#content2 {
-    height: 130px;
-    margin-top: 10px;
-    margin-left: 150px;
-}
-
-#side {
-    padding: 20px 30px;
-    background-color:  rgba(224, 224, 224);
-}
-
-#logoimg {
-    width: 230px;
-    height: 80px;
-    margin: 30px 20px;
-}
-
-.nav-link {
-  margin-left: 10px;
-}
-
-ul {
-    border-style: solid;
-    border: 1px;
-}
-
-dl, ol, ul {
-    margin: 5px 150px;
-    margin-bottom: 1rem;
-}
-
-ol, ul {
-    padding-left: 2rem;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-#textBox {
-    width: 300px;
-    text-align: center;
-    align-content: center;
-}s
-
-#btn {
-    background-color: lightgrey;
+.img {
+    width: 150px;
+    height: 150px;
+    margin: 30px 50px;
     border-style: solid;
     border-width: 1px;
-    border-color: grey;
+    border-radius: 30px;
+    border-color: gray;
+    text-align: center;
 }
-
-#preview {
+img{
     width: 100px;
     height: 100px;
+    margin: 25px 0px;
+}
 
+.info{
+    margin-top: 50px;
+}
+.info .nick{
+    margin-top: -10px
 }
